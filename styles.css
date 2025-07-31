@@ -1,0 +1,140 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+header {
+  /* Use a simple gradient inspired by the Nicaraguan flag instead of a large image.
+     The three horizontal bands evoke the blue and white stripes of the flag.
+     This avoids having to load an external image and keeps the code self‑contained. */
+  background: linear-gradient(
+    to bottom,
+    #0073cf 0%,  /* top blue band */
+    #0073cf 33%,
+    #ffffff 33%, /* middle white band */
+    #ffffff 66%,
+    #0073cf 66%, /* bottom blue band */
+    #0073cf 100%
+  );
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.5rem;
+  background-color: #0073cf;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:disabled {
+  background-color: #b0cdea;
+  cursor: not-allowed;
+}
+
+.place-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.place-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.place-card p {
+  margin: 0.25rem 0;
+}
+
+.place-card .actions {
+  margin-top: 0.5rem;
+}
+
+.itinerary-day {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.itinerary-day h4 {
+  margin-top: 0;
+}
+
+.event-item {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-item span.time {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
